@@ -41,7 +41,7 @@
             // 
             // rpvDeportistas
             // 
-            this.rpvDeportistas.LocalReport.ReportEmbeddedResource = "TestIt.Listados.repDeportistasListado.rdlc";
+            this.rpvDeportistas.LocalReport.ReportEmbeddedResource = "TestIt.Reportes.Listados.repDeportistasListado.rdlc";
             this.rpvDeportistas.Location = new System.Drawing.Point(334, 37);
             this.rpvDeportistas.Name = "rpvDeportistas";
             this.rpvDeportistas.ServerReport.BearerToken = null;
@@ -137,7 +137,6 @@
             this.Controls.Add(this.rpvDeportistas);
             this.Name = "ctrlListadoDeporistas";
             this.Size = new System.Drawing.Size(1047, 677);
-            
             this.grpFiltros.ResumeLayout(false);
             this.grpFiltros.PerformLayout();
             this.ResumeLayout(false);

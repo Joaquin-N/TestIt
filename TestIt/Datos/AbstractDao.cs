@@ -29,16 +29,15 @@ namespace TestIt.Datos
         protected List<object> buscar(string consulta)
         {
             DataTable resultado = DataManager.GetInstance().ConsultaSQL(consulta);
+            List<object> objectsList = new List<object>();
 
             if (resultado.Rows.Count > 0)
             {
-                List<object> objectsList = new List<object>();
                 foreach (DataRow row in resultado.Rows)
                     objectsList.Add(mappingObject(row));
-                return objectsList;
             }
 
-            return null;
+            return objectsList;
         }
         protected object buscarUno(string consulta)
         {

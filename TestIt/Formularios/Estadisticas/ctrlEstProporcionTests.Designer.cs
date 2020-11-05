@@ -46,7 +46,7 @@
             // 
             // rpvEjecuciones
             // 
-            this.rpvEjecuciones.LocalReport.ReportEmbeddedResource = "TestIt.Estadisticas.repProporcionTests.rdlc";
+            this.rpvEjecuciones.LocalReport.ReportEmbeddedResource = "TestIt.Reportes.Estadisticas.repProporcionTests.rdlc";
             this.rpvEjecuciones.Location = new System.Drawing.Point(338, 32);
             this.rpvEjecuciones.Name = "rpvEjecuciones";
             this.rpvEjecuciones.ServerReport.BearerToken = null;

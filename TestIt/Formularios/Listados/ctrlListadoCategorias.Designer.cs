@@ -120,7 +120,7 @@
             // 
             // rpvCategorias
             // 
-            this.rpvCategorias.LocalReport.ReportEmbeddedResource = "TestIt.Listados.repCategoriaListado.rdlc";
+            this.rpvCategorias.LocalReport.ReportEmbeddedResource = "TestIt.Reportes.Listados.repCategoriaListado.rdlc";
             this.rpvCategorias.Location = new System.Drawing.Point(345, 25);
             this.rpvCategorias.Name = "rpvCategorias";
             this.rpvCategorias.ServerReport.BearerToken = null;

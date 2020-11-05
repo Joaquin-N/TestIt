@@ -46,7 +46,7 @@
             // 
             // rpvEsfuerzoTest
             // 
-            this.rpvEsfuerzoTest.LocalReport.ReportEmbeddedResource = "TestIt.Estadisticas.repEsfuerzoPorTest.rdlc";
+            this.rpvEsfuerzoTest.LocalReport.ReportEmbeddedResource = "TestIt.Reportes.Estadisticas.repEsfuerzoPorTest.rdlc";
             this.rpvEsfuerzoTest.Location = new System.Drawing.Point(340, 30);
             this.rpvEsfuerzoTest.Name = "rpvEsfuerzoTest";
             this.rpvEsfuerzoTest.ServerReport.BearerToken = null;

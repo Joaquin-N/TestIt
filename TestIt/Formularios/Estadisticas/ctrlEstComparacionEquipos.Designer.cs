@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpFiltros = new System.Windows.Forms.GroupBox();
+            this.lblMes = new System.Windows.Forms.Label();
+            this.dtpMes = new System.Windows.Forms.DateTimePicker();
             this.grdEquipos = new System.Windows.Forms.DataGridView();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.equipoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,14 +44,12 @@
             this.lblAnio = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.rpvEjecuciones = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dtpMes = new System.Windows.Forms.DateTimePicker();
-            this.lblMes = new System.Windows.Forms.Label();
-            this.dataSetEstadisticas = new TestIt.DataSets.DataSetEstadisticas();
             this.ejecEquiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetEstadisticas = new TestIt.DataSets.DataSetEstadisticas();
             this.grpFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEquipos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetEstadisticas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ejecEquiposBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetEstadisticas)).BeginInit();
             this.SuspendLayout();
             // 
             // grpFiltros
@@ -73,6 +73,26 @@
             this.grpFiltros.TabStop = false;
             this.grpFiltros.Text = "Filtros";
             // 
+            // lblMes
+            // 
+            this.lblMes.AutoSize = true;
+            this.lblMes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMes.Location = new System.Drawing.Point(74, 46);
+            this.lblMes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMes.Name = "lblMes";
+            this.lblMes.Size = new System.Drawing.Size(36, 17);
+            this.lblMes.TabIndex = 25;
+            this.lblMes.Text = "Mes:";
+            // 
+            // dtpMes
+            // 
+            this.dtpMes.CustomFormat = "MM";
+            this.dtpMes.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpMes.Location = new System.Drawing.Point(128, 41);
+            this.dtpMes.Name = "dtpMes";
+            this.dtpMes.Size = new System.Drawing.Size(138, 23);
+            this.dtpMes.TabIndex = 24;
+            // 
             // grdEquipos
             // 
             this.grdEquipos.AllowUserToAddRows = false;
@@ -82,14 +102,14 @@
             this.grdEquipos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdEquipos.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.grdEquipos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEquipos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdEquipos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdEquipos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
@@ -196,42 +216,22 @@
             // rpvEjecuciones
             // 
             this.rpvEjecuciones.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.ejecEquiposBindingSource, "id_equipo", true));
-            this.rpvEjecuciones.LocalReport.ReportEmbeddedResource = "TestIt.Estadisticas.repComparacionEquipos.rdlc";
+            this.rpvEjecuciones.LocalReport.ReportEmbeddedResource = "TestIt.Reportes.Estadisticas.repComparacionEquipos.rdlc";
             this.rpvEjecuciones.Location = new System.Drawing.Point(341, 33);
             this.rpvEjecuciones.Name = "rpvEjecuciones";
             this.rpvEjecuciones.ServerReport.BearerToken = null;
             this.rpvEjecuciones.Size = new System.Drawing.Size(680, 616);
             this.rpvEjecuciones.TabIndex = 20;
             // 
-            // dtpMes
+            // ejecEquiposBindingSource
             // 
-            this.dtpMes.CustomFormat = "MM";
-            this.dtpMes.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpMes.Location = new System.Drawing.Point(128, 41);
-            this.dtpMes.Name = "dtpMes";
-            this.dtpMes.Size = new System.Drawing.Size(138, 23);
-            this.dtpMes.TabIndex = 24;
-            // 
-            // lblMes
-            // 
-            this.lblMes.AutoSize = true;
-            this.lblMes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMes.Location = new System.Drawing.Point(74, 46);
-            this.lblMes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMes.Name = "lblMes";
-            this.lblMes.Size = new System.Drawing.Size(36, 17);
-            this.lblMes.TabIndex = 25;
-            this.lblMes.Text = "Mes:";
+            this.ejecEquiposBindingSource.DataMember = "EjecEquipos";
+            this.ejecEquiposBindingSource.DataSource = this.dataSetEstadisticas;
             // 
             // dataSetEstadisticas
             // 
             this.dataSetEstadisticas.DataSetName = "DataSetEstadisticas";
             this.dataSetEstadisticas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ejecEquiposBindingSource
-            // 
-            this.ejecEquiposBindingSource.DataMember = "EjecEquipos";
-            this.ejecEquiposBindingSource.DataSource = this.dataSetEstadisticas;
             // 
             // ctrlEstComparacionEquipos
             // 
@@ -247,8 +247,8 @@
             this.grpFiltros.ResumeLayout(false);
             this.grpFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEquipos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetEstadisticas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ejecEquiposBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetEstadisticas)).EndInit();
             this.ResumeLayout(false);
 
         }

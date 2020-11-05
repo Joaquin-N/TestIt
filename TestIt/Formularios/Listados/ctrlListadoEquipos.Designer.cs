@@ -108,7 +108,7 @@
             // 
             // rpvEquipos
             // 
-            this.rpvEquipos.LocalReport.ReportEmbeddedResource = "TestIt.Listados.repEquiposListado.rdlc";
+            this.rpvEquipos.LocalReport.ReportEmbeddedResource = "TestIt.Reportes.Listados.repEquiposListado.rdlc";
             this.rpvEquipos.Location = new System.Drawing.Point(348, 35);
             this.rpvEquipos.Name = "rpvEquipos";
             this.rpvEquipos.ServerReport.BearerToken = null;

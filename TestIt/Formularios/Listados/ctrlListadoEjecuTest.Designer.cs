@@ -161,7 +161,7 @@
             // 
             // rpvEjecuciones
             // 
-            this.rpvEjecuciones.LocalReport.ReportEmbeddedResource = "TestIt.Listados.repEjecuTestListado.rdlc";
+            this.rpvEjecuciones.LocalReport.ReportEmbeddedResource = "TestIt.Reportes.Listados.repEjecuTestListado.rdlc";
             this.rpvEjecuciones.Location = new System.Drawing.Point(341, 33);
             this.rpvEjecuciones.Name = "rpvEjecuciones";
             this.rpvEjecuciones.ServerReport.BearerToken = null;
